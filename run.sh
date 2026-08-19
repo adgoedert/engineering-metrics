@@ -26,6 +26,9 @@ usage() {
   echo "                                Pastel de Portal (board PT/122)"
   echo "  ikigai-total-epics-lead-time-per-engineer"
   echo "                                Same report, scoped to Team Ikigai"
+  echo "  horizon-total-epics-lead-time-per-engineer"
+  echo "                                Team Horizon, capacity model: max 8h/engineer/day"
+  echo "                                split equally across tickets held that day"
   echo ""
   echo "Both month reports accept: --month YYYY-MM (default 2026-07)"
   echo "                           --board <id> --project <KEY>  (override auto-detection)"
@@ -52,6 +55,10 @@ case "$REPORT" in
   ikigai-total-epics-lead-time-per-engineer)
     shift
     "$PYTHON" "$SCRIPT_DIR/ikigai_total_epics_lead_time_per_engineer.py" "$@"
+    ;;
+  horizon-total-epics-lead-time-per-engineer)
+    shift
+    "$PYTHON" "$SCRIPT_DIR/horizon_total_epics_lead_time_per_engineer.py" "$@"
     ;;
   boards)
     shift

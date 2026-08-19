@@ -38,3 +38,34 @@ def business_days_overlap(
     start = max(a_start, b_start)
     end = min(a_end, b_end)
     return business_days_between(start, end)
+
+
+def business_days_touched(start: datetime, end: datetime) -> list:
+    """
+    The distinct weekday dates an interval touches, however briefly.
+
+    Used by capacity-based reports, where a day is the indivisible unit: a
+    ticket held for ten minutes on Tuesday still makes Tuesday one of that
+    engineer's active days, to be shared with whatever else they held.
+    """
+    if end <= start:
+        return []
+
+    days = []
+    cursor = start
+    while cursor < end:
+        if cursor.weekday() < SATURDAY:
+            days.append(cursor.date())
+        cursor = (cursor + timedelta(days=1)).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
+    return days
+
+
+def intersect(
+    a_start: datetime, a_end: datetime, b_start: datetime, b_end: datetime
+):
+    """Intersection of two intervals as (start, end), or None when disjoint."""
+    start = max(a_start, b_start)
+    end = min(a_end, b_end)
+    return (start, end) if end > start else None
