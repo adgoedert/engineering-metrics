@@ -33,7 +33,12 @@ class JiraClient:
         return response.json()
 
     def get_sprint_issues(self, board_id: int, jql: str, fields: str = "summary,status,parent,issuetype") -> list[dict]:
-        """Fetch all issues matching a JQL query for a board, paginating automatically."""
+        """
+        Fetch all issues matching a JQL query for a board, paginating.
+
+        Pagination stops on isLast when present, else on total. Keying only off
+        total silently truncated to one page whenever the response omitted it.
+        """
         issues = []
         start = 0
         while True:
@@ -45,9 +50,25 @@ class JiraClient:
             batch = data.get("issues", [])
             issues.extend(batch)
             start += len(batch)
-            if start >= data.get("total", 0) or not batch:
+            if not batch or data.get("isLast") is True:
+                break
+            total = data.get("total")
+            if total is not None and start >= total:
+                break
+            if len(batch) < params["maxResults"]:
                 break
         return issues
+
+    def get_board(self, board_id: int) -> dict:
+        """Board details, including location.projectKey."""
+        url = f"{self.base_url.replace('/rest/api/3', '')}/rest/agile/1.0/board/{board_id}"
+        response = requests.get(url, headers=self.headers)
+        response.raise_for_status()
+        return response.json()
+
+    def board_project_key(self, board_id: int) -> str:
+        """The project a board belongs to, or '' when Jira does not report one."""
+        return (self.get_board(board_id).get("location") or {}).get("projectKey", "") or ""
 
     def list_boards(self, name: str = None, project_key: str = None) -> list[dict]:
         """List agile boards, optionally filtered by name substring or project."""
@@ -91,6 +112,41 @@ class JiraClient:
                 f"Project {project_key} has {len(boards)} boards — pick one explicitly:\n{listing}"
             )
         return boards[0]["id"]
+
+    def resolve_board_named(self, project_key: str, name: str) -> int:
+        """
+        The id of the board called `name` within a project. Matching is
+        case-insensitive, exact first, then a unique substring — so a pinned
+        "SPD board" still resolves if Jira reports "SPD Board".
+        """
+        boards = self.list_boards(project_key=project_key)
+        if not boards:
+            raise SystemExit(
+                f"No board found for project {project_key}, so '{name}' cannot be resolved."
+            )
+
+        wanted = name.strip().lower()
+        exact = [b for b in boards if (b.get("name") or "").strip().lower() == wanted]
+        if len(exact) == 1:
+            return exact[0]["id"]
+        if len(exact) > 1:
+            candidates = exact
+        else:
+            candidates = [b for b in boards if wanted in (b.get("name") or "").lower()]
+            if len(candidates) == 1:
+                return candidates[0]["id"]
+
+        listing = "\n".join(
+            f"  id={b['id']:<6} {b.get('name', '')} ({b.get('type', '')})" for b in boards
+        )
+        if not candidates:
+            raise SystemExit(
+                f"Project {project_key} has no board matching '{name}'. Boards found:\n{listing}"
+            )
+        raise SystemExit(
+            f"'{name}' matches {len(candidates)} boards in {project_key} — "
+            f"pin the id instead. Boards found:\n{listing}"
+        )
 
     def get_issue(self, issue_key: str, fields: str = "summary,parent,issuetype") -> dict:
         return self.get(f"/issue/{issue_key}", params={"fields": fields})

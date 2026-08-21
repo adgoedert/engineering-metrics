@@ -57,6 +57,17 @@ def run(client, month: str, board_id: int, project: str, wbso_epics: set = None,
     summaries: dict[str, str] = {}
     epic_cache: dict = {}
 
+    # Funnel counters. An empty report has several possible causes and they need
+    # telling apart: a board holding no matching issues looks identical to an
+    # epic filter that excluded everything, unless the drop-off is recorded.
+    funnel = {
+        "candidates": len(issues),
+        "never_in_progress": 0,
+        "outside_month": 0,
+        "no_assignee_overlap": 0,
+        "attributed": 0,
+    }
+
     for i, issue in enumerate(issues, 1):
         key = issue["key"]
         print(f"  [{i}/{len(issues)}] {key}", end="\r", flush=True)
@@ -64,10 +75,12 @@ def run(client, month: str, board_id: int, project: str, wbso_epics: set = None,
         changelog = client.get_issue_changelog(key)
         win_start, win_end, _is_open = build_work_window(changelog, client, now)
         if win_start is None:
+            funnel["never_in_progress"] += 1
             continue
 
         window = intersect(win_start, win_end, month_start, month_end)
         if window is None:
+            funnel["outside_month"] += 1
             continue
         win_start, win_end = window
 
@@ -81,8 +94,11 @@ def run(client, month: str, board_id: int, project: str, wbso_epics: set = None,
                 recorded = True
 
         if recorded:
+            funnel["attributed"] += 1
             epic_of[key] = resolve_epic_ref(issue, client, epic_cache)
             summaries[key] = issue["fields"].get("summary", "")[:45]
+        else:
+            funnel["no_assignee_overlap"] += 1
 
     print()
 
@@ -128,6 +144,9 @@ def run(client, month: str, board_id: int, project: str, wbso_epics: set = None,
         print(f"{len(kept_tickets)} are under a WBSO epic; {len(excluded_tickets)} filtered out.")
     print()
 
+    funnel["kept_after_wbso_filter"] = len(kept_tickets)
+    funnel["excluded_by_wbso_filter"] = len(excluded_tickets)
+
     diagnostics = {
         "capacity_hours": dict(capacity_hours),
         "excluded": excluded_tickets,
@@ -135,8 +154,37 @@ def run(client, month: str, board_id: int, project: str, wbso_epics: set = None,
         "wbso_other_team": wbso_other_team,
         "filtered": wbso_epics is not None,
         "epic_of": epic_of,
+        "funnel": funnel,
+        "jql": jql,
     }
     return totals, summaries, day_counts, busiest, diagnostics
+
+
+def explain_empty(diagnostics: dict) -> str:
+    """
+    Why a run produced no hours. Reads the funnel and names the first stage that
+    ate everything, so 'no data' points at a cause instead of a shrug.
+    """
+    f = diagnostics.get("funnel") or {}
+    if not f:
+        return "No WBSO-epic work in the reporting month"
+
+    if not f.get("candidates"):
+        return ("Board returned 0 issues for the JQL — wrong board for this project, "
+                "or the board's filter excludes them")
+    if not f.get("attributed"):
+        parts = []
+        if f.get("never_in_progress"):
+            parts.append(f"{f['never_in_progress']} never reached In Progress")
+        if f.get("outside_month"):
+            parts.append(f"{f['outside_month']} in progress outside the month")
+        if f.get("no_assignee_overlap"):
+            parts.append(f"{f['no_assignee_overlap']} had no assignee while in progress")
+        return f"{f['candidates']} candidates, none attributable ({'; '.join(parts)})"
+    if not f.get("kept_after_wbso_filter"):
+        return (f"{f['attributed']} ticket(s) had hours, but all "
+                f"{f.get('excluded_by_wbso_filter', 0)} were filtered out as non-WBSO")
+    return "No WBSO-epic work in the reporting month"
 
 
 def print_report(totals, summaries, day_counts, busiest, month, team, diagnostics=None):

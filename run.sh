@@ -30,11 +30,16 @@ usage() {
   echo "                                Team Horizon, capacity model: max 8h/engineer/day"
   echo "                                split equally across tickets held that day"
   echo "                                add --wbso to count only WBSO-flagged epics"
-  echo "  consolidated-wbso-hours       The above as an .xlsx workbook"
-  echo "                                (defaults: --board 20 --month 2025-07, WBSO always on)"
+  echo "  consolidated-wbso-hours       All teams in epics-mapping.csv as an .xlsx workbook,"
+  echo "                                one sheet per team (default --month 2025-07)"
+  echo "                                --team \"Team Ikigai\" to limit a run"
+  echo "                                --board \"YODA=51\" or --board \"YODA=Yoda Scrum\" to pin"
+  echo "                                --skip-empty-teams to omit teams with no hours"
+  echo "                                pinned by default: Team Horizon=20,"
+  echo "                                Team Ikigai=\"SPD board\", Team Samba=\"Samba board\""
   echo ""
   echo "Month reports accept: --month YYYY-MM (default 2026-07)"
-  echo "                      --team \"Team X\"  (name as it appears in epics-mapping.csv)"
+  echo "                      --team \"Team Ikigai\"  (name as in epics-mapping.csv)"
   echo "                      --board <id> --project <KEY>  (skip the CSV lookup)"
   echo ""
   echo "Team -> Jira project comes from epics-mapping.csv (\"Project name\" -> \"Project key\"),"
@@ -43,6 +48,7 @@ usage() {
   echo "Utilities:"
   echo "  boards [name]                 List accessible boards, optionally filtered by name"
   echo "  teams                         List team -> project mappings from the CSV"
+  echo "  diagnose \"Team Name\"          Show why a team's sheet is empty, stage by stage"
   echo ""
 }
 
@@ -78,6 +84,10 @@ case "$REPORT" in
     ;;
   teams)
     "$PYTHON" "$SCRIPT_DIR/list_teams.py"
+    ;;
+  diagnose)
+    shift
+    "$PYTHON" "$SCRIPT_DIR/diagnose_team.py" "$@"
     ;;
   *)
     echo "❌  Unknown or missing report: '$REPORT'"
