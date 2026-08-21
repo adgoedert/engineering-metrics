@@ -134,6 +134,7 @@ def run(client, month: str, board_id: int, project: str, wbso_epics: set = None,
         "unmapped_epics": unmapped_epics,
         "wbso_other_team": wbso_other_team,
         "filtered": wbso_epics is not None,
+        "epic_of": epic_of,
     }
     return totals, summaries, day_counts, busiest, diagnostics
 

@@ -30,6 +30,8 @@ usage() {
   echo "                                Team Horizon, capacity model: max 8h/engineer/day"
   echo "                                split equally across tickets held that day"
   echo "                                add --wbso to count only WBSO-flagged epics"
+  echo "  consolidated-wbso-hours       The above as an .xlsx workbook"
+  echo "                                (defaults: --board 20 --month 2025-07, WBSO always on)"
   echo ""
   echo "Month reports accept: --month YYYY-MM (default 2026-07)"
   echo "                      --team \"Team X\"  (name as it appears in epics-mapping.csv)"
@@ -65,6 +67,10 @@ case "$REPORT" in
   horizon-total-epics-lead-time-per-engineer)
     shift
     "$PYTHON" "$SCRIPT_DIR/horizon_total_epics_lead_time_per_engineer.py" "$@"
+    ;;
+  consolidated-wbso-hours)
+    shift
+    "$PYTHON" "$SCRIPT_DIR/consolidated_wbso_hours.py" "$@"
     ;;
   boards)
     shift
