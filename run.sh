@@ -29,12 +29,18 @@ usage() {
   echo "  horizon-total-epics-lead-time-per-engineer"
   echo "                                Team Horizon, capacity model: max 8h/engineer/day"
   echo "                                split equally across tickets held that day"
+  echo "                                add --wbso to count only WBSO-flagged epics"
   echo ""
-  echo "Both month reports accept: --month YYYY-MM (default 2026-07)"
-  echo "                           --board <id> --project <KEY>  (override auto-detection)"
+  echo "Month reports accept: --month YYYY-MM (default 2026-07)"
+  echo "                      --team \"Team X\"  (name as it appears in epics-mapping.csv)"
+  echo "                      --board <id> --project <KEY>  (skip the CSV lookup)"
+  echo ""
+  echo "Team -> Jira project comes from epics-mapping.csv (\"Project name\" -> \"Project key\"),"
+  echo "e.g. Team Horizon -> SUK, Team Ikigai -> SPD. Run './run.sh teams' to list them."
   echo ""
   echo "Utilities:"
   echo "  boards [name]                 List accessible boards, optionally filtered by name"
+  echo "  teams                         List team -> project mappings from the CSV"
   echo ""
 }
 
@@ -63,6 +69,9 @@ case "$REPORT" in
   boards)
     shift
     "$PYTHON" "$SCRIPT_DIR/list_boards.py" "$@"
+    ;;
+  teams)
+    "$PYTHON" "$SCRIPT_DIR/list_teams.py"
     ;;
   *)
     echo "❌  Unknown or missing report: '$REPORT'"

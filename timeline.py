@@ -92,9 +92,18 @@ def build_assignee_intervals(changelog: list, issue: dict, now: datetime) -> lis
 
 
 def resolve_epic(issue: dict, client: JiraClient, cache: dict) -> str:
+    """The display label of the nearest Epic ancestor. See resolve_epic_ref."""
+    return resolve_epic_ref(issue, client, cache)[1]
+
+
+def resolve_epic_ref(issue: dict, client: JiraClient, cache: dict) -> tuple:
     """
-    Walk up the parent chain to the nearest Epic. Falls back to the direct
-    parent if no ancestor is explicitly typed as an Epic.
+    Walk up the parent chain to the nearest Epic, returning (epic_key, label).
+    Falls back to the direct parent if no ancestor is explicitly typed as an
+    Epic; returns (None, NO_EPIC) when the ticket has no parent at all.
+
+    Callers that need to match the epic against an external mapping want the
+    bare key; callers that only display it want the label.
     """
     key = issue["key"]
     if key in cache:
@@ -102,8 +111,8 @@ def resolve_epic(issue: dict, client: JiraClient, cache: dict) -> str:
 
     parent = issue["fields"].get("parent")
     if not parent:
-        cache[key] = NO_EPIC
-        return NO_EPIC
+        cache[key] = (None, NO_EPIC)
+        return cache[key]
 
     direct_parent = parent.get("key")
     current_key = direct_parent
@@ -122,14 +131,14 @@ def resolve_epic(issue: dict, client: JiraClient, cache: dict) -> str:
         issue_type = fields.get("issuetype", {}).get("name", "")
         if issue_type.lower() == "epic":
             summary = fields.get("summary", "")[:40]
-            label = f"{current_key} {summary}"
-            cache[key] = label
-            cache[current_key] = label
-            return label
+            ref = (current_key, f"{current_key} {summary}")
+            cache[key] = ref
+            cache[current_key] = ref
+            return ref
         next_parent = fields.get("parent")
         current_key = next_parent.get("key") if next_parent else None
 
     # No Epic ancestor found — attribute to the direct parent.
-    label = f"{direct_parent} (no epic ancestor)"
-    cache[key] = label
-    return label
+    ref = (direct_parent, f"{direct_parent} (no epic ancestor)")
+    cache[key] = ref
+    return ref

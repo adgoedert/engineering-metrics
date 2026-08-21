@@ -1,0 +1,383 @@
+Project key,Project name,Parent key,Parent summary,WBSO yes/no,mapping to WBSO,wbso_project,wbso_tb
+YODA,YODA,YODA-1504,"[Audit] Maintenance, improvements and aftercare 2026",no,,,
+YODA,YODA,YODA-1735,[CVS] Multi region,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-1736,[UK Adapter] Multi region,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-1734,[CBI outbound] Multi region,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-1672,Multi Region by Yoda,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-928,Yoda-care,no,,,
+YODA,YODA,YODA-1801,[DashboardApi] Multi region,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-1737,[OPA VOP] Multi region,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-848,[DashboardAPI]V1.1 - maintenance,no,,,
+YODA,YODA,YODA-1790,[platform-eu-cross-border-adapters] Multi region,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-1772,Reduce master node size to M and enable autoscaling,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-72,Maintenance and improvements by Team Yoda,no,,,
+YODA,YODA,YODA-1733,[FCA] Multi region,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-1676,Adjust metadata BIC field to correspond to the specifications,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1473,[FluentD]Update FluentD config to push back to s3 on failure,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1428,[Audit] Billing 1.0,no,,,
+YODA,YODA,YODA-1656,[Audit] Cross cluster search,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1413,OPA VOP for JPM,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-155,[FCA] maintenance,no,,,
+YODA,YODA,YODA-172,Observability Platform,yes,SP-01 / TB4,SP-01 , TB4
+YODA,YODA,YODA-1645,[ACC] Create all VOP Audit clusters with correct FluentD config,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1565,[Audit] Add second cluster: Ireland,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1636,[PRD] Deploy OPA,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-1590,[PRD] Create IE cluster,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1596,[PRD] Create NL Cluster,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1592,[ACC] Create NL Cluster,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-165,[AuthServer] maintenance,no,,,
+YODA,YODA,YODA-1430,[Audit] Roll out,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-52,[CBI] Maintenance,no,,,
+YODA,YODA,YODA-736,[KVK] maintenance,no,,,
+YODA,YODA,YODA-1429,[Audit] Backup strategy,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-1338,Auditing & Dashboard POCs,yes,SP-01 / TB5,SP-01 , TB5
+YODA,YODA,YODA-682,KnYCo V1,no,,,
+YODA,YODA,YODA-1046,OPA - JPM V1,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-425,[CVS] Maintenance,no,,,
+YODA,YODA,YODA-1370,Disaster Recovery Yoda 2025,no,,,
+YODA,YODA,YODA-814,[UK Adapter] maintenance,no,,,
+YODA,YODA,YODA-50,[KVK] Improvements,no,,,
+YODA,YODA,YODA-427,[AuthServer] Improvements,no,,,
+YODA,YODA,YODA-1101,[AuthServer] PayUK dir aftercare & improvements,no,,,
+YODA,YODA,YODA-993,[Observ] V0.31 Actually shipping logs from our applications,yes,SP-01 / TB4,SP-01 , TB4
+YODA,YODA,YODA-433,[FCA] Send last name only,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,YODA-495,[FCA] Use StreamMind cache,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,PM-7,French connection: SepaMail MVP,yes,SP-01 / TB1,SP-01 , TB1
+YODA,YODA,PM-37,Observability Platform,yes,SP-01 / TB4,SP-01 , TB4
+VOPI,VOP-Implementations,VOPI-38,Komercni Banka,,,,
+VOPI,VOP-Implementations,VOPI-7,BeoBank,,,,
+VOPI,VOP-Implementations,VOPI-1,VDK,,,,
+VA,Vendor Assessment,VA-343,TABS,,,,
+VA,Vendor Assessment,VA-340,Amazon Sagemaker,,,,
+VA,Vendor Assessment,VA-337,New company doctor (independent) - Arjan Vergunst,,,,
+VA,Vendor Assessment,VA-330,VA IbanXS,,,,
+VA,Vendor Assessment,VA-329,Legal Review - NotebookLM (AI-supported research & summarization tool),,,,
+VA,Vendor Assessment,VA-327,ICAG Ltd,,,,
+VA,Vendor Assessment,VA-324,Adobe Acrobat,,,,
+VA,Vendor Assessment,VA-321,Vendor Assessment: Xebia,,,,
+VA,Vendor Assessment,VA-318,Vendor Assessment - Sepatool.nl,,,,
+VA,Vendor Assessment,VA-313,PSPLab - Vendor Assessment,,,,
+VA,Vendor Assessment,VA-310,Sentry - Security,,,,
+VA,Vendor Assessment,VA-306,"Sentrama -Guaranteed sales meetings with your ICP, supported by AI assistant Sandra, insights, and customer success.",,,,
+VA,Vendor Assessment,VA-303,Vendor Assessment - Mailgun,,,,
+VA,Vendor Assessment,VA-300,TravelPerk,,,,
+VA,Vendor Assessment,VA-297,Lano - Global Payroll Provider (EOR),,,,
+VA,Vendor Assessment,VA-289,VA - ChatGPT,,,,
+VA,Vendor Assessment,VA-286,CloudTalk - voip service,,,,
+VA,Vendor Assessment,VA-283,Proton - E2E encrypted cloud storage,,,,
+VA,Vendor Assessment,VA-279,Zoom AI,,,,
+VA,Vendor Assessment,VA-276,Using Transcript Tool in Hubspot,,,,
+VA,Vendor Assessment,VA-269,Need to record meetings,,,,
+VA,Vendor Assessment,VA-265,please review the use of Fathom,,,,
+VA,Vendor Assessment,VA-262,1password password manager,,,,
+VA,Vendor Assessment,VA-258,Vendor Assesment - Mercer,,,,
+VA,Vendor Assessment,VA-254,Clay.com for marketing,,,,
+VA,Vendor Assessment,VA-250,Trainline business account,,,,
+VA,Vendor Assessment,VA-247,Security review -  Google slides add-on: Lottiefiles.com,,,,
+VA,Vendor Assessment,VA-244,Vendor Assessment - Hubspot Add on: Breeze,,,,
+VA,Vendor Assessment,VA-239,Vendor assessment: Figma,,,,
+VA,Vendor Assessment,VA-238,Vendor Assessment - Windsor.ai,,,,
+VA,Vendor Assessment,VA-234,Vendor Assessment - Fibbler.co,,,,
+VA,Vendor Assessment,VA-227,Vendor Assessment - PEScheck,,,,
+VA,Vendor Assessment,VA-224,"Please assess the use of a paid subscription for DeepL for German-English translations mainly, but they offer 33 languages",,,,
+VA,Vendor Assessment,VA-214,Appythings,,,,
+VA,Vendor Assessment,VA-213,RocketX Consultancy,,,,
+VA,Vendor Assessment,VA-210,Hexis,,,,
+VA,Vendor Assessment,VA-207,Ansarada,,,,
+VA,Vendor Assessment,VA-180,Vendor Assessment - Zapier,,,,
+VA,Vendor Assessment,VA-185,Vendor assessment: Google - Gemini,,,,
+VA,Vendor Assessment,VA-164,Amazon Q Developer,,,,
+VA,Vendor Assessment,VA-163,Vendor Assessment - Solvimon,,,,
+TX,Team X,TX-98,Elastic Cloud Monitoring for Surepay Global v0.1,N/A,,,
+TS,Team Security,TS-834,Create Cryptographic Asset Inventory,,,,
+TS,Team Security,TS-832,PQC Migration,,,,
+TS,Team Security,TS-824,JAMF Protect CIS Compliance,,,,
+TS,Team Security,TS-755,Update Asset Inventory,,,,
+TS,Team Security,TS-544,Audit-2025,,,,
+TS,Team Security,TS-271,Audit-2024,,,,
+TS,Team Security,TS-324,Nexus IQ,,,,
+TS,Team Security,TS-65,SR - Corporate Portal First Iteration,,,,
+SUK,Team Horizon,SUK-5938,3.Tenant Creation Lambda for Managed OpenSearch Dashboards,no,,,
+SUK,Team Horizon,SUK-5910,EU Customer Support Request Regarding VOP 2025,no,,,
+SUK,Team Horizon,SUK-5944,"Expiring Certificates on December 24, 2025: apigee-client.non-prd-uk.surepay.io, api.acc-uk.surepay.io, apigee.acc-uk.surepay.io",no,,,
+SUK,Team Horizon,SUK-5790,VOP Improvements  - 2025,yes,SP-01 / TB1,SP-01 , TB1
+SUK,Team Horizon,SUK-5916,[UK] COP Improvements - 2025,no,,,
+SUK,Team Horizon,SUK-5911,UK Customer Support Request Regarding COP - 2026,no,,,
+SUK,Team Horizon,SUK-5832,[COP] New Bank Onboardings - 2025,no,,,
+SUK,Team Horizon,SUK-1684,Small tickets & Customer Support Issues/Bugs,no,,,
+SUK,Team Horizon,SUK-5908,2. Implement WAF in front of dashboard,no,,,
+SUK,Team Horizon,SUK-5324,Update all services to Java 25 LTS - After Sept. 2025,no,,,
+SUK,Team Horizon,SUK-3266,Release Activities  Team UK,no,,,
+SUK,Team Horizon,SUK-5459,Cloud formation to Terraform Migration - 2026,no,,,
+SUK,Team Horizon,SUK-3268,UK Dev/DevOps Improvements,no,,,
+SUK,Team Horizon,SUK-5326,Managed Opensearch Migration - 2026,no,,,
+SUK,Team Horizon,SUK-5751,VOP Multi Region,yes,SP-01 / TB1,SP-01 , TB1
+SUK,Team Horizon,SUK-5466,VOP Outbound Adaptor,yes,SP-01 / TB7,SP-01 , TB7
+SUK,Team Horizon,SUK-5578,VOP Inbound Adaptor,yes,SP-01 / TB7,SP-01 , TB7
+SUK,Team Horizon,SUK-5787,NEW: Support for BIC8,yes,SP-01 / TB6,SP-01 , TB6
+SUK,Team Horizon,SUK-1762,UK QA Improvements,no,,,
+SUK,Team Horizon,SUK-5756,Audit data – Mask credit card numbers,yes,SP-01 / TB5,SP-01 , TB5
+SUK,Team Horizon,SUK-5507,[VOP Outbound Adaptor]Integrate with real BIC enrichment service,yes,SP-01 / TB6,SP-01 , TB6
+SUK,Team Horizon,SUK-5443,UK Certificates 2025,,,,
+SUK,Team Horizon,PM-33,UK Platform Maintenance,N/A,,,
+SUK,Team Horizon,PM-397,Interoperability,N/A,,,
+SUK,Team Horizon,SUK-5337,VOP EDS Integration Implementation,yes,SP-01 / TB7,SP-01 , TB7
+SUK,Team Horizon,SUK-5498,[VOP Adaptor] Implement Integration logic for calling BIC Enrichment service,yes,SP-01 / TB6,SP-01 , TB6
+SUK,Team Horizon,SUK-5483,[VOP-Adaptor]Implement cloud watch logging requirements for VOP,yes,SP-01 / TB4,SP-01 , TB4
+SUK,Team Horizon,SUK-2605,Technical Debt,no,,,
+SUK,Team Horizon,SUK-1034,Security related findings are grouped under here,no,,,
+SUK,Team Horizon,PM-372,VOP EDS Integration,N/A,,,
+SUK,Team Horizon,SUK-5099,Open Search Improvements  - Phase 2,no,,,
+SUK,Team Horizon,SUK-5214,Figure how to restore/replicate dashboard and alerts in case of any failures in one cluster,no,,,
+SUK,Team Horizon,SUK-5181,UK Disaster Recovery 2025,no,,,
+SUK,Team Horizon,SUK-5266,Annual ISMS Training 2025,no,,,
+SUK,Team Horizon,SUK-5221,Open - Search Improvements -2025,no,,,
+SUK,Team Horizon,SUK-4845,PayUK Directory post-transition cleanup,no,,,
+SUK,Team Horizon,SUK-1176,AWS Cost Optimisation Savings,no,,,
+SUK,Team Horizon,SUK-5100,Simplification of the Token Services (TSOP and TSGW),no,,,
+SUK,Team Horizon,PM-32,UK Onboarding & Renewal Automation,yes,SP-02 / TB2,SP-02 , TB2
+SUK,Team Horizon,SUK-4932,PayUK Indirect participants onboarding tasks,no,,,
+SUK,Team Horizon,PM-355,Core UK automation project REFUELED  in consideration with New Aggregator models timeline,no,,,
+SUK,Team Horizon,PM-362,Pay UK transition to non-OB Directory,no,,,
+SUK,Team Horizon,SUK-4492,UK Disaster Recovery 2024,no,,,
+SUK,Team Horizon,SUK-4413,UK Certificates 2025 - OB,no,,,
+SUK,Team Horizon,SUK-4023,AIB SSO Configuration for MI COP Dashboard,no,,,
+SUK,Team Horizon,SUK-3412,M5 : Automation of Onboarding Feedback & Improvements,yes,SP-02 / TB2,SP-02 , TB2
+SUK,Team Horizon,SUK-2917,M3 : Onboard Sender/Responder in Gateway [Outbound + Participants],no,,,
+SUK,Team Horizon,PT6-301,Migration to OpenSearch,no,,,
+SUK,Team Horizon,SUK-3066,M3 : SRD Feedback Improvements,no,,,
+SUK,Team Horizon,SUK-2918,M4 : Onboard Responder in Aggregator/Inbound,no,,,
+SUK,Team Horizon,SUK-2942,[UK-COP] Performance test on Perf Env after enabling monitoring.,no,,,
+SUK,Team Horizon,PM-23,UK Customer Onboarding,no,,,
+SUK,Team Horizon,SUK-1782,Platform Monitoring,yes,SP-01 / TB4,SP-01 , TB4
+SUK,Team Horizon,SUK-2683,API Documentation,no,,,
+SUK,Team Horizon,SUK-1945,Disaster Recovery 2021,no,,,
+SSP,Sample Scrum Project,SSP-4,Offline Functionality Enhancement,,,,
+SSP,Sample Scrum Project,SSP-2,User Analytics,,,,
+SSP,Sample Scrum Project,SSP-25,Security and Permissions Handling,,,,
+SSP,Sample Scrum Project,SSP-3,Cross-Platform Development Support,,,,
+SSP,Sample Scrum Project,SSP-1,Mobile Platform Integration,,,,
+SPD,Team Ikigai,SPD-3381,Multi Region,yes,SP-01 / TB1,SP-01 , TB1
+SPD,Team Ikigai,SPD-3012,VoP Bulk Checker Iteration 2,yes,SP-01 / TB2,SP-01 , TB2
+SPD,Team Ikigai,SPD-3236,VoP Bulk Checker performance improvements,yes,SP-01 / TB2,SP-01 , TB2
+SPD,Team Ikigai,SPD-2724,VoP Bulk Checker Iteration 1,yes,SP-01 / TB2,SP-01 , TB2
+SPD,Team Ikigai,SPD-2834,VoP Data Hosting Iteration 2,yes,SP-01 / TB3,SP-01 , TB3
+SPD,Team Ikigai,SPD-2686,UK Data Hosting Support,no,,,
+SPD,Team Ikigai,SPD-2716,VoP Data Hosting Interation 1,yes,SP-01 / TB3,SP-01 , TB3
+SPD,Team Ikigai,SPD-493,UK Data Hosting,no,,,
+SPD,Team Ikigai,SPD-1200,Corporate Portal (CPEU),no,,,
+SPD,Team Ikigai,SPD-12,UK Name Matching Algorithm - Support,no,,,
+SPD,Team Ikigai,SPD-810,Technical Debt,no,,,
+SPD,Team Ikigai,PM-405,EU Onboarding,N/A,,,
+SPD,Team Ikigai,PM-393,VoP Bulk Request,N/A,,,
+SPD,Team Ikigai,PM-220,EU Platform maintenance,N/A,,,
+SPD,Team Ikigai,PM-395,VoP Offline Respond,N/A,,,
+SPD,Team Ikigai,PM-221,Security & Compliance,N/A,,,
+SPD,Team Ikigai,PM-25,Name Matching Algorithm,N/A,,,
+SPD,Team Ikigai,PM-36,Techstack modernisation,N/A,,,
+SPD,Team Ikigai,SPD-1732,Corporate Bulk Checker,yes,SP-01 / TB2,SP-01 , TB2
+SPD,Team Ikigai,SPD-24,UK Data Override,no,,,
+SPD,Team Ikigai,SPD-3082,VoP Algorithm Support,no,,,
+SPD,Team Ikigai,SDO-7526,VOP Algorithm Improvements,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-3368,VoP Bulk Checker v1.1,yes,SP-01 / TB2,SP-01 , TB2
+SPD,Team Ikigai,SPD-3341,VoP Data Hosting,yes,SP-01 / TB3,SP-01 , TB3
+SPD,Team Ikigai,SPD-3094,VoP Algorithm IPR Ready,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-3135,VoP Bulk Webhook,yes,SP-01 / TB2,SP-01 , TB2
+SPD,Team Ikigai,SPD-2803,Disaster Recovery 2025,no,,,
+SPD,Team Ikigai,SPD-1404,NMA Internationalisation,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-3231,VoP Bulk Checker Support,no,,,
+SPD,Team Ikigai,SPD-3006,VoP Data Hosting Support,no,,,
+SPD,Team Ikigai,SPD-1129,Miscellaneous,no,,,
+SPD,Team Ikigai,SDO-7745,UnstructuredRemittanceInformation,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-2140,Ikigai Infra,no,,,
+SPD,Team Ikigai,SPD-2003,Security operational tasks,no,,,
+SPD,Team Ikigai,SPD-1652,DevPortal,no,,,
+SPD,Team Ikigai,SPD-2749,VoP Data Hosting Ingester v1,yes,SP-01 / TB3,SP-01 , TB3
+SPD,Team Ikigai,SPD-2723,VoP Algorithm for BE GoLive,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-2414,Portal Whitelabel and User Management (Mizuho / MUFG),no,,,
+SPD,Team Ikigai,SPD-2671,Auth0 Backups,no,,,
+SPD,Team Ikigai,SPD-2095,New Corporate Portal setup,no,,,
+SPD,Team Ikigai,SPD-2057,Disaster Recovery 2024,no,,,
+SPD,Team Ikigai,SPD-1403,NMA Library EU,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-1564,Exact online plugin,no,,,
+SPD,Team Ikigai,SPD-225,Improvements to the audit data for Gateway,yes,SP-01 / TB5,SP-01 , TB5
+SPD,Team Ikigai,SPD-3346,Unstructured Remittance Information post release improvements,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-3181,Implement solution UnstructuredRemittance for the Ingester,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-3182,Implement solution UnstructuredRemittance for the Accounts API,yes,SP-03 / TB1,SP-03 , TB1
+SPD,Team Ikigai,SPD-3060,Observability to VOP DataHosting OpenSearch Clusters,yes,SP-01 / TB4,SP-01 , TB4
+SPD,Team Ikigai,SPD-2922,Support VOP DH infra for multiple countries,yes,SP-01 / TB3,SP-01 , TB3
+SPD,Team Ikigai,SPD-2837,Tighten security for the infrastructure,no,,,
+SPD,Team Ikigai,SPD-2955,Create Node 22 base for corp portal,no,,,
+SPD,Team Ikigai,SPD-2920,Infra for email reporting (SES),no,,,
+SPD,Team Ikigai,SPD-2878,Create a separate stack for S3,no,,,
+SPD,Team Ikigai,SPD-2838,Disaster Recovery Test,no,,,
+SPD,Team Ikigai,SPD-2822,Create VoP onboarding pipeline - Opensearch meta,no,,,
+SPD,Team Ikigai,SPD-2753,Ingest file content in Accounts Cluster,no,,,
+SPD,Team Ikigai,SPD-2756,Create VoP onboarding pipeline,yes,SP-02 / TB2,SP-02 , TB2
+SPD,Team Ikigai,SPD-2750,Read from S3 and transform to datamodel,no,,,
+SPD,Team Ikigai,SPD-2740,Create SFTP Server and S3 Setup,no,,,
+SPD,Team Ikigai,SPD-2741,Build VoP Data Ingester: Project setup,yes,SP-01 / TB3,SP-01 , TB3
+SPA,SurePay Prod Access,YODA-1672,Multi Region by Yoda,,,,
+SPA,SurePay Prod Access,SPD-3368,VoP Bulk Checker v1.1,,,,
+SPA,SurePay Prod Access,YODA-1504,"[Audit] Maintenance, improvements and aftercare 2026",,,,
+SPA,SurePay Prod Access,YODA-1413,OPA VOP for JPM,,,,
+SDO,Team Samba,SDO-7344,VOP ACC - Onboarding - Dataprovisioning 2025,no,,,
+SDO,Team Samba,SDO-7767,[QA] - Customer Support - Analyse and Troubleshooting,no,,,
+SDO,Team Samba,SDO-7680,Multi region,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-8006,Customer Support,no,,,
+SDO,Team Samba,SDO-8067,Swift outbound v3,yes,SP-02 / TB3,SP-02 , TB3
+SDO,Team Samba,SDO-8009,Customer Settings Migration (MVP),yes,SP-02 / TB2,SP-02 , TB2
+SDO,Team Samba,SDO-6091,Technical debt 2025,no,,,
+SDO,Team Samba,SDO-7354,VOP Gateway bugs,no,,,
+SDO,Team Samba,SDO-6876,VoP Gateway solution,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-7940,Enabling the end-to-end test automation with CICD,no,,,
+SDO,Team Samba,SDO-7634,BIC Enrichment,yes,SP-01 / TB6,SP-01 , TB6
+SDO,Team Samba,SDO-7982,Samba Observability,yes,SP-01 / TB4,SP-01 , TB4
+SDO,Team Samba,SDO-7514,VOP PRD - Onboarding - Dataprovisioning 2025,no,,,
+SDO,Team Samba,SDO-7881,End to end test planning for VOP gateway,no,,,
+SDO,Team Samba,SDO-7151,Certificates 2025,no,,,
+SDO,Team Samba,SDO-4682,Maintenance,no,,,
+SDO,Team Samba,SDO-7526,VOP Algorithm Improvements,yes,SP-03 / TB1,SP-03 , TB1
+SDO,Team Samba,SDO-6309,NexusIQ Vulnerabilities Fix,no,,,
+SDO,Team Samba,SDO-7174,QA and Testing,no,,,
+SDO,Team Samba,SDO-7907,Corporate checks via VOP (MVP),yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-4324,SWIFT Outbound/Inbound,yes,SP-02 / TB3,SP-02 , TB3
+SDO,Team Samba,SDO-7438,VOP Gateway - Enhancements,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-7462,VOP Gateway Onboardings (MTLS),no,,,
+SDO,Team Samba,SDO-5021,Service Improvements,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-7622,VOP Performance investigation,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-7838,Onboard 8 banks on PROD and ACC,no,,,
+SDO,Team Samba,SDO-7822,Alpha Group -DP API - Onboard - ACC,no,,,
+SDO,Team Samba,SDO-7807,RBSI - DP API Onboard PRD,no,,,
+SDO,Team Samba,SDO-7808,Adyen - DP API Onboard - PRD,no,,,
+SDO,Team Samba,SDO-7144,VoP Bank API extended,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-7152,Releases 2025,no,,,
+SDO,Team Samba,SDO-7750,Algorithm Pipeline by Responder,yes,SP-03 / TB1,SP-03 , TB1
+SDO,Team Samba,SDO-7745,UnstructuredRemittanceInformation,yes,SP-03 / TB1,SP-03 , TB1
+SDO,Team Samba,SDO-7620,Accounts override - manual loading,yes,SP-01 / TB3,SP-01 , TB3
+SDO,Team Samba,SDO-7198,VOP Customer Settings,no,,,
+SDO,Team Samba,SDO-7441,VOP Customer Support,no,,,
+SDO,Team Samba,SDO-7453,Farewell to BankIdentifiers list,no,,,
+SDO,Team Samba,SDO-7209,VoP Data Provisioning,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,PT6-1548,Pentest Remediation - 2025,no,,,
+SDO,Team Samba,SDO-6948,[Data Migration] Move ER/FRI (raw + derived) to its own cluster,no,,,
+SDO,Team Samba,SDO-6927,VOP Offline Data Provisioning update,no,,,
+SDO,Team Samba,SDO-7125,Traefik Migration,no,,,
+SDO,Team Samba,SDO-6058,Fraud Risk Indicator - Workstream 2,no,,,
+SDO,Team Samba,SDO-7261,Automate main VoP test cases,no,,,
+SDO,Team Samba,SDO-7264,[POC] Can we just forward the calls to pablo in wiremock (regarding the connection paramaters etc),no,,,
+SDO,Team Samba,SDO-7250,Move data streaming service to separate repo,no,,,
+SDO,Team Samba,SDO-7243,Move rule execution services to separate repo,no,,,
+SDO,Team Samba,SDO-7156,Disaster Recovery 2025,no,,,
+SDO,Team Samba,SDO-7160,VoP Router Solution,no,,,
+SDO,Team Samba,SDO-7171,MatchedName offering,yes,SP-01 / TB1,SP-01 , TB1
+SDO,Team Samba,SDO-7167,Online Data Provisioning Improvements,no,,,
+SDO,Team Samba,PM-220,EU Platform maintenance,N/A,,,
+SDO,Team Samba,PM-392,VoP Single Request,N/A,,,
+SDO,Team Samba,SDO-6525,Clean-up after EC2 to ECS migration,no,,,
+SDO,Team Samba,SDO-7058,KBC Offline DP Onboarding,no,,,
+SDO,Team Samba,SDO-7060,Pablo Onboarding - Online CRM,no,,,
+SDO,Team Samba,SDO-6816,VPC Migration,no,,,
+SDO,Team Samba,SDO-6112,ECS and VPC Migration Backlog,no,,,
+SDO,Team Samba,SDO-6245,SFTP automation,no,,,
+SDO,Team Samba,SDO-7056,Tool for XML to NDJSON,no,,,
+SDO,Team Samba,SDO-6290,Easyconfig Update Process - Enhancements,no,,,
+SDO,Team Samba,PM-36,Techstack modernisation,N/A,,,
+SDO,Team Samba,SDO-6056,Fraud Risk Indicator - Workstream 1,no,,,
+SDO,Team Samba,PM-219,Monolith decomposition phase 1,N/A,,,
+SDO,Team Samba,SDO-5833,[Easyconfig] Database migration,no,,,
+SDO,Team Samba,SDO-5871,[Easyconfig] Service Consumer I,no,,,
+SDO,Team Samba,SDO-5552,EasyConfig clean up 2022,no,,,
+SDO,Team Samba,SDO-6068,Dataprovisioning rewrite,no,,,
+SDO,Team Samba,PM-37,Observability Platform,N/A,,,
+PT6,Platform Team 6,PT6-1419,Traefik migration V3,yes,SP-01 / TB1,SP-01 , TB1
+PT6,Platform Team 6,PT6-1670,Multi region,yes,SP-01 / TB1,SP-01 , TB1
+PT6,Platform Team 6,PT6-6,Technical Debt.,no,,,
+PT6,Platform Team 6,PT6-1911,Observability,yes,SP-01 / TB4,SP-01 , TB4
+PT6,Platform Team 6,PT6-82,Security / Compliance,no,,,
+PT6,Platform Team 6,PT6-1926,Platform Security hardening,no,,,
+PT6,Platform Team 6,PT6-1638,Patch Management Tickets,no,,,
+PT6,Platform Team 6,PT6-1937,Cost Optimisation,no,,,
+PT6,Platform Team 6,PT6-1710,K8s/Traefik Enhancements,yes,SP-01 / TB1,SP-01 , TB1
+PT6,Platform Team 6,PT6-1678,Almalinux 9.6,no,,,
+PT6,Platform Team 6,PT6-1713,Autoscaling,yes,SP-01 / TB1,SP-01 , TB1
+PT6,Platform Team 6,PT6-16,Operation & incidents,no,,,
+PT6,Platform Team 6,PT6-1533,Traefik Inbound Onboardings,no,,,
+PT6,Platform Team 6,PT6-868,Traefik outbound onboarding,no,,,
+PT6,Platform Team 6,PT6-1648,Apigee X improvements,no,,,
+PT6,Platform Team 6,PT6-67,Backup and Restore,no,,,
+PT6,Platform Team 6,PT6-1664,Resilience testing 2025,no,,,
+PT6,Platform Team 6,PT6-1320,Traefik outbound,no,,,
+PT6,Platform Team 6,PT6-1185,Apigee X,no,,,
+PT6,Platform Team 6,PT6-1612,ECR Lifecycle policies filtering with wildcards,no,,,
+PT6,Platform Team 6,PT6-1548,Pentest Remediation - 2025,no,,,
+PT6,Platform Team 6,PT6-1503,CI/CD Improvements,no,,,
+PT6,Platform Team 6,PT6-1712,Audit 2025 Findings,no,,,
+PT6,Platform Team 6,PT6-1491,Back up and restore Dynamo,no,,,
+PT6,Platform Team 6,PT6-26,Cost Management,no,,,
+PT6,Platform Team 6,PT6-980,Pentest Remediation - 2024,no,,,
+PT6,Platform Team 6,PT6-924,Network simplification,no,,,
+PT6,Platform Team 6,PM-36,Techstack modernisation,no,,,
+PT6,Platform Team 6,PM-221,Security & Compliance,no,,,
+PT6,Platform Team 6,PT6-56,Network and Infra,no,,,
+PT6,Platform Team 6,PM-222,AWS cost saving,no,,,
+PT6,Platform Team 6,PM-266,Incidents,no,,,
+PT,Pastel de Portal Team,PT-318,Ad Hoc requests from Business,no,,,
+PT,Pastel de Portal Team,PT-56,Maintenance & Technical Debt,no,,,
+PT,Pastel de Portal Team,PT-288,Bugs 2025,no,,,
+PT,Pastel de Portal Team,PT-420,VoP For Corporates,yes,SP-01 / TB1,SP-01 , TB1
+PT,Pastel de Portal Team,PT-450,Shut Down Mizuho Whitelabel,no,,,
+PT,Pastel de Portal Team,PT-413,WhiteLabel: KBC,no,,,
+PT,Pastel de Portal Team,PT-421,Multi Region Implementation,yes,SP-01 / TB1,SP-01 , TB1
+PT,Pastel de Portal Team,PT-302,WhiteLabel: AIB (Allied Irish Bank),no,,,
+PT,Pastel de Portal Team,PT-391,Creditor Check MVP,no,,,
+PT,Pastel de Portal Team,PT-43,UI Improvements,no,,,
+PT,Pastel de Portal Team,PT-351,VOP File Check Improvements,yes,SP-01 / TB2,SP-01 , TB2
+PT,Pastel de Portal Team,PT-287,Production Releases 2025,no,,,
+PT,Pastel de Portal Team,PT-301,WhiteLabel: Bank of Ireland,no,,,
+PT,Pastel de Portal Team,PT-14,Logging & Monitoring,no,,,
+PT,Pastel de Portal Team,PT-333,Test Automation,no,,,
+PT,Pastel de Portal Team,PT-357,File Check for Trial Users,no,,,
+PT,Pastel de Portal Team,PT-290,WhiteLabel: NWB Bank,no,,,
+PT,Pastel de Portal Team,PT-289,WhiteLabel: DFM,no,,,
+PT,Pastel de Portal Team,PT-54,VOP File Check,yes,SP-01 / TB2,SP-01 , TB2
+PT,Pastel de Portal Team,PT-311,WhiteLabel: MUFG,no,,,
+PT,Pastel de Portal Team,PT-24,UX Designs,no,,,
+PT,Pastel de Portal Team,PT-22,VOP Single Check,yes,SP-01 / TB1,SP-01 , TB1
+PT,Pastel de Portal Team,PT-30,White label Implementations,no,,,
+PT,Pastel de Portal Team,PT-275,VOP - Wrap org names with cag<org_name>_,no,,,
+PT,Pastel de Portal Team,PT-62,User management,no,,,
+PT,Pastel de Portal Team,PT-55,Configuration management,no,,,
+PT,Pastel de Portal Team,PT-53,white label improvements,no,,,
+PT,Pastel de Portal Team,PT-68,SurePay Devportal,no,,,
+PT,Pastel de Portal Team,PT-58,Know your supplier (OLD tickets),no,,,
+PT,Pastel de Portal Team,PT-131,Support .csv file upload for bulk checks,yes,SP-01 / TB2,SP-01 , TB2
+PT,Pastel de Portal Team,PT-86,Make more clear that user is in organisation on the portal,no,,,
+PT,Pastel de Portal Team,PT-112,Creditor Details,no,,,
+PT,Pastel de Portal Team,PT-76,Set a max amount of users per org,no,,,
+PT,Pastel de Portal Team,PT-61,Exact Online,no,,,
+PT,Pastel de Portal Team,PT-64,Changes to IBAN screen,no,,,
+PT,Pastel de Portal Team,PT-59,Redefine onboarding flow,no,,,
+PT,Pastel de Portal Team,PT-67,Security requirements,no,,,
+PM,Product Management,PM-221,Security & Compliance,no,,,
+PM,Product Management,PM-386,VoP EU,N/A,,,
+PM,Product Management,PM-371,VoP Single Request,N/A,,,
+PM,Product Management,PM-32,UK Onboarding & Renewal Automation,N/A,,,
+PM,Product Management,PM-35,Platform Improvements,N/A,,,
+IFI,IT for IT,IFI-6,User onboarding,N/A,,,
+IFI,IT for IT,IFI-7,Tech Dept,N/A,,,
+IFI,IT for IT,IFI-1,Integrate all apps with SSO,N/A,,,
+DP,Developer Portal,DP-34,15Feb-15Mar (Branch),N/A,,,
+DP,Developer Portal,DP-36,hot-fix-dp-19-feb,N/A,,,
+DP,Developer Portal,DP-32,FRI-AccountActivity,N/A,,,
+DP,Developer Portal,DP-23,hot-fix-naming-february,N/A,,,
+DP,Developer Portal,DP-19,hot-fixes-dp-february,N/A,,,
+DP,Developer Portal,DP-2,VoP-changes-16Jan-15Feb,N/A,,,
+CUTP,CoP UK Transition Project,CUTP-15,RBSI T2 Inbound + Online Provisioning,N/A,,,
+CUTP,CoP UK Transition Project,CUTP-11,UBN T2 Inbound + Online Provisioning,N/A,,,
+COR,Corporates,COR-33,Audit Check 💼 🔬,N/A,,,
+COR,Corporates,COR-28,Whitelabel Portal 🏦 👨‍💻,N/A,,,
+COR,Corporates,COR-17,Scalability 📈 🌱,N/A,,,
+COR,Corporates,COR-20,Creditor Check: Version 1 🕵 ✅,N/A,,,
+COR,Corporates,COR-8,Customer Communication 📡 💪,N/A,,,
+COR,Corporates,COR-12,Data Enrichment 🐋 💙,N/A,,,

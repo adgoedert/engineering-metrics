@@ -49,8 +49,8 @@ class JiraClient:
                 break
         return issues
 
-    def list_boards(self, name: str = None) -> list[dict]:
-        """List agile boards, optionally filtered by a name substring."""
+    def list_boards(self, name: str = None, project_key: str = None) -> list[dict]:
+        """List agile boards, optionally filtered by name substring or project."""
         boards = []
         start = 0
         while True:
@@ -58,6 +58,8 @@ class JiraClient:
             params = {"startAt": start, "maxResults": 50}
             if name:
                 params["name"] = name
+            if project_key:
+                params["projectKeyOrId"] = project_key
             response = requests.get(url, headers=self.headers, params=params)
             response.raise_for_status()
             data = response.json()
@@ -68,34 +70,27 @@ class JiraClient:
                 break
         return boards
 
-    def resolve_board_by_name(self, name: str) -> tuple[int, str]:
+    def resolve_board_for_project(self, project_key: str) -> int:
         """
-        Find exactly one board whose name matches `name`, returning
-        (board_id, project_key). Raises with the candidate list when the
-        match is ambiguous or empty, so the caller can pick explicitly.
+        The board id for a project. Projects often carry more than one board,
+        and picking the wrong one silently changes which tickets a report sees,
+        so an ambiguous result is an error asking for --board rather than a guess.
         """
-        matches = self.list_boards(name=name)
-        if not matches:
+        boards = self.list_boards(project_key=project_key)
+        if not boards:
             raise SystemExit(
-                f"No board found matching '{name}'.\n"
-                f"Run './run.sh boards' to list the boards you have access to."
+                f"No board found for project {project_key}.\n"
+                f"Run './run.sh boards' to list the boards you can access."
             )
-        if len(matches) > 1:
+        if len(boards) > 1:
             listing = "\n".join(
-                f"  id={b['id']:<6} {b.get('name', '')} "
-                f"(project {b.get('location', {}).get('projectKey', '?')})"
-                for b in matches
+                f"  --board {b['id']:<6} {b.get('name', '')} ({b.get('type', '')})"
+                for b in boards
             )
             raise SystemExit(
-                f"'{name}' matches {len(matches)} boards — pass --board and --project explicitly:\n{listing}"
+                f"Project {project_key} has {len(boards)} boards — pick one explicitly:\n{listing}"
             )
-        board = matches[0]
-        project_key = board.get("location", {}).get("projectKey")
-        if not project_key:
-            raise SystemExit(
-                f"Board {board['id']} ('{board.get('name')}') has no project key; pass --project explicitly."
-            )
-        return board["id"], project_key
+        return boards[0]["id"]
 
     def get_issue(self, issue_key: str, fields: str = "summary,parent,issuetype") -> dict:
         return self.get(f"/issue/{issue_key}", params={"fields": fields})
