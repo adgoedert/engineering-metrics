@@ -37,6 +37,8 @@ usage() {
   echo "                                --skip-empty-teams to omit teams with no hours"
   echo "                                pinned by default: Team Horizon=20,"
   echo "                                Team Ikigai=\"SPD board\", Team Samba=\"Samba board\""
+  echo "  total-hours-per-year          Sum WBSO hours across the 12 monthly workbooks"
+  echo "                                (--year 2025, --per-team for a breakdown)"
   echo ""
   echo "Month reports accept: --month YYYY-MM (default 2026-07)"
   echo "                      --team \"Team Ikigai\"  (name as in epics-mapping.csv)"
@@ -77,6 +79,10 @@ case "$REPORT" in
   consolidated-wbso-hours)
     shift
     "$PYTHON" "$SCRIPT_DIR/consolidated_wbso_hours.py" "$@"
+    ;;
+  total-hours-per-year)
+    shift
+    "$PYTHON" "$SCRIPT_DIR/total_hours_per_year.py" "$@"
     ;;
   boards)
     shift
